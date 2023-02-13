@@ -1,5 +1,6 @@
 {
   "bufferline.nvim": { "branch": "main", "commit": "84b0822b2af478d0b4f7b0f9249ca218855331db" },
+  "gitsigns.nvim": { "branch": "main", "commit": "a5caac26768af80b7c57b919f77b3fed3d7424d0" },
   "lazy.nvim": { "branch": "main", "commit": "06f835d0b4b62d9d26fe0ec4190b981f2f5632d2" },
   "lualine.nvim": { "branch": "master", "commit": "0050b308552e45f7128f399886c86afefc3eb988" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "00a2e8892fb3d144ac8fa70bcbd18711bb965765" },
