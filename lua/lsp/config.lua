@@ -33,7 +33,7 @@ local servers = {
 local function init_servers(configs)
     for server, config in pairs(configs) do
         if config.enabled then
-            lspconfig[server].setup(config)
+            lspconfig[server].setup(config.config)
         end
     end
 
