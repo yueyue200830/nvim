@@ -15,6 +15,11 @@ local servers = {
         enabled = true,
         config = {},
     },
+    -- cpp
+    clangd = {
+        enabled = true,
+        config = {},
+    },
     -- json
     jsonls = {
         enabled = true,
