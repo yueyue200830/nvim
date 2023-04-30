@@ -36,7 +36,10 @@ map('n', '<leader>fh', ':Telescope help_tags <CR>', opt)
 -- gitsign
 map('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', opt)
 map('v', '<leader>hs', ':Gitsigns stage_hunk<CR>', opt)
-map('n', '<leader>hs', ':Gitsigns reset_hunk<CR>', opt)
-map('v', '<leader>hs', ':Gitsigns reset_hunk<CR>', opt)
+map('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', opt)
+map('v', '<leader>hr', ':Gitsigns reset_hunk<CR>', opt)
 map('n', '<leader>hS', ':Gitsigns stage_buffer<CR>', opt)
 map('n', '<leader>hd', ':Gitsigns diffthis<CR>', opt)
+
+-- lsp
+map('n', '<leader>lf', ':lua vim.lsp.buf.format{async=true}<CR>', opt) -- format file

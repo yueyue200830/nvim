@@ -31,7 +31,7 @@ require("lazy").setup({
   -- highlight
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
+    event = 'CursorHold',
     config = function()
       require("plugin-config/treesitter")
     end,
@@ -48,6 +48,7 @@ require("lazy").setup({
       require("plugin-config/lualine")
     end,
   },
+  -- lsp
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -73,6 +74,7 @@ require("lazy").setup({
     cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUninstallAll", "MasonLog" },
     -- lazy = true,
   },
+  -- auto completion
   {
     "hrsh7th/nvim-cmp",
     config = function()
@@ -86,6 +88,14 @@ require("lazy").setup({
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
     },
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require("plugin-config/null-ls")
+    end,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    -- lazy = true,
   },
   -- search
   {
