@@ -1,13 +1,18 @@
 local null_ls = require("null-ls")
+-- TODO: change all to pcall
+
+local code_actions = null_ls.builtins.code_actions
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
   sources = {
-    null_ls.builtins.code_actions.gitsigns,
-    null_ls.builtins.formatting.prettier,
-    null_ls.builtins.formatting.lua_format,
-    null_ls.builtins.formatting.gofmt,
-    null_ls.builtins.formatting.codespell,
-    null_ls.builtins.diagnostics.pylint,
+    code_actions.gitsigns,
+    formatting.prettier.with({ extra_args = {} }),
+    formatting.stylua,
+    formatting.gofmt,
+    formatting.codespell,
+    diagnostics.pylint,
     -- null_ls.builtins.diagnostics.golangci_lint,
-  }
+  },
 })

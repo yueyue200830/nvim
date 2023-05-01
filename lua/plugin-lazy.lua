@@ -13,11 +13,10 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-
 require("lazy").setup({
   -- theme
   { "navarasu/onedark.nvim", lazy = true },
-  { "shaunsingh/nord.nvim", lazy = true },
+  { "shaunsingh/nord.nvim",  lazy = true },
 
   -- directory tree
   {
@@ -31,7 +30,7 @@ require("lazy").setup({
   -- highlight
   {
     "nvim-treesitter/nvim-treesitter",
-    event = 'CursorHold',
+    event = "CursorHold",
     config = function()
       require("plugin-config/treesitter")
     end,
@@ -62,7 +61,7 @@ require("lazy").setup({
     config = function()
       require("plugin-config/mason-lspconfig")
     end,
-    cmd = { "LspInfo", "LspInstall", "LspUninstall"},
+    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     -- lazy = true,
     dependencies = { "williamboman/mason.nvim" },
   },
@@ -124,4 +123,3 @@ require("lazy").setup({
     lazy = true,
   },
 })
-

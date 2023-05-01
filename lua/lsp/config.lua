@@ -32,7 +32,7 @@ local servers = {
   -- css
   cssls = {
     enabled = false,
-  }
+  },
 }
 
 local function init_servers(configs)
@@ -41,7 +41,6 @@ local function init_servers(configs)
       lspconfig[server].setup(config.config)
     end
   end
-
 end
 
 init_servers(servers)
