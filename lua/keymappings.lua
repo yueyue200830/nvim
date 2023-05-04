@@ -30,6 +30,7 @@ map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
 -- bufferline
 map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<leader>x", ":Bdelete<CR>", opt) -- delete current buffer
 
 -- Telescope
 map("n", "<leader>ff", ":Telescope find_files <CR>", opt)

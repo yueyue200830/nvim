@@ -40,6 +40,7 @@ require("lazy").setup({
     config = function()
       require("plugin-config/bufferline")
     end,
+    dependencies = { "moll/vim-bbye" },
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -105,10 +106,6 @@ require("lazy").setup({
     -- lazy = true,
     cmd = "Telescope",
     dependencies = { "nvim-lua/plenary.nvim" },
-  },
-  {
-    "nvim-lua/plenary.nvim",
-    lazy = true,
   },
   -- git
   {
