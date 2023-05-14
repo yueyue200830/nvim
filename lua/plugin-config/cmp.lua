@@ -1,4 +1,8 @@
-local cmp = require("cmp")
+local ok, cmp = pcall(require, "cmp")
+if not ok then
+  vim.notify("init cmp error")
+  return
+end
 
 cmp.setup({
   snippet = {

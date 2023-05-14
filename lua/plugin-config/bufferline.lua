@@ -1,6 +1,12 @@
+local ok, bufferline = pcall(require, "bufferline")
+if not ok then
+  vim.notify("init bufferline error")
+  return
+end
+
 vim.opt.termguicolors = true
 
-require("bufferline").setup({
+bufferline.setup({
   options = {
     diagnostics = "nvim_lsp",
     offsets = {

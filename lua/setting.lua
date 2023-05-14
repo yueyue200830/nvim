@@ -1,3 +1,4 @@
+-- :help options
 local options = {
   -- clipboard = 'unnamedplus', --同步系统剪贴板
   cmdheight = 1,
@@ -15,7 +16,7 @@ local options = {
   hlsearch = false,
   -- indent
   smartindent = true, --智能缩进
-  cindent = true,
+  cindent = true,    -- Enables automatic C program indenting
   autoindent = true, --自动缩进
   tabstop = 4,       --Tab宽度
   shiftwidth = 4,    --每次Shift调整的缩进

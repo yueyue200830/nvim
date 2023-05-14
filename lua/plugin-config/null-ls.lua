@@ -1,5 +1,8 @@
-local null_ls = require("null-ls")
--- TODO: change all to pcall
+local ok, null_ls = pcall(require, "null-ls")
+if not ok then
+  vim.notify("init null-ls error")
+  return
+end
 
 local code_actions = null_ls.builtins.code_actions
 local formatting = null_ls.builtins.formatting

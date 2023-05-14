@@ -1,6 +1,6 @@
 local exist, lspconfig = pcall(require, "lspconfig")
-
 if not exist then
+  vim.notify("init lspconfig error")
   return
 end
 

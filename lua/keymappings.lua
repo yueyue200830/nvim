@@ -7,11 +7,21 @@ local opt = { noremap = true, silent = true }
 
 map("n", "<leader>q", ":q<CR>", opt)
 
--- Window 切换
+-- Switch Window
 map("n", "<C-h>", "<C-w>h", opt)
 map("n", "<C-l>", "<C-w>l", opt)
 map("n", "<C-k>", "<C-w>k", opt)
 map("n", "<C-j>", "<C-w>j", opt)
+
+-- Resize the Window
+map("n", "<C-Up>", ":resize +2<CR>", opt)
+map("n", "<C-Down>", ":resize -2<CR>", opt)
+map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
+map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
+
+-- Move block up and down in visual mode
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", opt)
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", opt)
 
 -- 不复制选中的文字，放入剪贴板_中
 map("x", "<leader>p", '"_dP', opt)
