@@ -9,6 +9,7 @@ local options = {
   fileencoding = "utf-8", --utf8编码
   number = true,         --行号
   relativenumber = true, --相对行号
+  signcolumn = "yes",    --展示状态行
   -- search
   ignorecase = true,     --查找时忽略大小写
   smartcase = true,      --智能大小写

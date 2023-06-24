@@ -55,6 +55,11 @@ map("n", "<leader>hr", ":Gitsigns reset_hunk<CR>", opt)
 map("v", "<leader>hr", ":Gitsigns reset_hunk<CR>", opt)
 map("n", "<leader>hS", ":Gitsigns stage_buffer<CR>", opt)
 map("n", "<leader>hd", ":Gitsigns diffthis<CR>", opt)
+map("n", "<leader>tg", ":lua _LAZYGIT_TOGGLE()<CR>", opt)
+
+-- comment use "ctrl + /"
+map("n", "<C-_>", ":lua require('Comment.api').toggle.linewise.current()<CR>", opt)
+map("v", "<C-_>", ":lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opt)
 
 -- lsp
 map("n", "<leader>lf", ":lua vim.lsp.buf.format{async=true}<CR>", opt) -- format file

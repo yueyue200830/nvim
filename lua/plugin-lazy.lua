@@ -54,7 +54,6 @@ require("lazy").setup({
     config = function()
       require("lsp")
     end,
-    -- lazy = true,
     dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
   },
   {
@@ -63,7 +62,6 @@ require("lazy").setup({
       require("plugin-config/mason-lspconfig")
     end,
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
-    -- lazy = true,
     dependencies = { "williamboman/mason.nvim" },
   },
   {
@@ -71,8 +69,8 @@ require("lazy").setup({
     config = function()
       require("plugin-config/mason")
     end,
+    build = ":MasonUpdate", -- :MasonUpdate updates registry contents
     cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUninstallAll", "MasonLog" },
-    -- lazy = true,
   },
   -- auto completion
   {
@@ -112,6 +110,37 @@ require("lazy").setup({
     "lewis6991/gitsigns.nvim",
     config = function()
       require("plugin-config.gitsigns")
+    end,
+  },
+  -- terminal
+  {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("plugin-config.toggleterm")
+    end,
+  },
+  -- auto pairs
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    dependencies = { "hrsh7th/nvim-cmp" },
+    config = function()
+      require("plugin-config.autopairs")
+    end,
+  },
+  -- comment
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("plugin-config.comment")
+    end,
+  },
+  -- startup page
+  {
+    "goolord/alpha-nvim",
+    event = "VimEnter",
+    config = function()
+      require("plugin-config.alpha")
     end,
   },
   -- icons
