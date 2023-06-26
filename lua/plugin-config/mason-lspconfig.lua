@@ -7,5 +7,9 @@ end
 lspconfig.setup({
   ensure_installed = {
     "gopls",
+    "lua_ls",
+    "clangd",
+    "pyright",
+    "tsserver",
   },
 })
